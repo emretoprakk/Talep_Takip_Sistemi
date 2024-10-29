@@ -1,14 +1,15 @@
 🌟 Onay Talep Uygulaması
+
 Bu uygulama, kullanıcıların talepler oluşturmasına ve bu talepler için bir onaylayıcı atamasına olanak tanır. Atanan onaylayıcı, kendisine gelen talepleri görüntüleyebilir ve her bir talebin durumunu belirleyebilir. Uygulama, süreç takibini kolaylaştırarak iş akışlarını düzenler.
 
 🚀 Temel Özellikler
-1️⃣ Talep Oluşturma
+*   Talep Oluşturma
 Kullanıcılar yeni talepler oluşturabilir ve her talep için bir onaylayıcı seçebilir.
 
-2️⃣ Onaylayıcı Atama
+*   Onaylayıcı Atama
 Her talep için kullanıcı tarafından bir onaylayıcı atanır. Bu onaylayıcı, talebi yönetir ve sürecini takip eder.
 
-3️⃣ Onay Durumu Yönetimi
+*   Onay Durumu Yönetimi
 Onaylayıcılar kendilerine gelen tüm talepleri görüntüleyebilir ve bu taleplerin durumunu (🟢 Onaylandı, 🔴 Reddedildi, 🟡 Beklemede) güncelleyebilir.
 
 📸 Uygulama Görselleri
