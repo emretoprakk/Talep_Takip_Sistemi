@@ -1,0 +1,146 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.request-container {
+  max-width: 600px;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+  position: relative;
+  top: 40px; /* Değişiklik: Navbar sabit olduğu için boşluk bırakıldı */
+}
+
+.request-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875em;
+  margin-top: 5px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.form-actions .btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  width: 48%; 
+}
+
+.form-actions .btn-primary {
+  background-color: #003366;
+  color: white;
+}
+
+.form-actions .btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.form-actions .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.form-actions .btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.response-message {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1em;
+  color: green;
+}
+
+@media (max-width: 768px) {
+  body {
+      padding: 10px; 
+  }
+
+  .request-container {
+      padding: 15px;
+      width: 100%;
+  }
+
+  .form-actions {
+      flex-direction: column; 
+  }
+
+  .form-actions .btn {
+      font-size: 14px;
+      padding: 10px 15px;
+      width: 100%; 
+      margin-bottom: 10px; 
+  }
+
+  .form-actions .btn:last-child {
+      margin-bottom: 0; 
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

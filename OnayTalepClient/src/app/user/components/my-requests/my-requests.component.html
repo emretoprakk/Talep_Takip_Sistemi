@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Taleplerim</h2>
+  <div class="requests">
+    <div class="request" *ngFor="let request of requests" [ngClass]="request.status.toLowerCase()">
+      <div class="request-details">
+        <p><strong>Açıklama:</strong> {{ request.description }}</p>
+        <p><strong>Onaylayıcı:</strong> {{ getApproverName(request.approvedById) }}</p>
+        <p><strong>Departman:</strong> {{ request.departmentName }}</p>
+        <p><strong>Talep Tarihi:</strong> {{ request.createdDate | date:'dd/MM/yyyy HH:mm:ss' }}</p>
+      </div>
+      <div class="request-status">
+        <label for="status-{{ request.userId }}">
+          Durum:
+          <span class="status-icon">
+            <i *ngIf="request.status === 'Pending'" class="fa fa-hourglass-half pending-icon"></i>
+            <i *ngIf="request.status === 'Approved'" class="fa fa-check-circle approved-icon"></i>
+            <i *ngIf="request.status === 'Rejected'" class="fa fa-times-circle rejected-icon"></i>
+          </span>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>

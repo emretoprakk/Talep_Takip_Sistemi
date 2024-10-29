@@ -1,0 +1,48 @@
+<body>
+    <div class="request-container">
+        <h2>Yeni Talep Oluştur</h2>
+        <form [formGroup]="requestForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="description">Talep Açıklaması</label>
+                <textarea id="description" formControlName="description" rows="4" required></textarea>
+                <div *ngIf="requestForm.controls['description'].invalid && requestForm.controls['description'].touched" class="error-message">
+                    Talep açıklaması boş bırakılamaz.
+                </div>
+            </div>
+  
+            <div class="form-group">
+                <label for="approver">Onaylayıcı</label>
+                <select id="approver" formControlName="approvedById" required>
+                    <option value="" disabled selected>Onaylayıcı seçiniz</option>
+                    <option value="47">Admin</option>
+                    <option value="50">Takım Lideri</option>
+                    <option value="51">Direktör</option>
+                </select>
+                <div *ngIf="requestForm.controls['approvedById'].invalid && requestForm.controls['approvedById'].touched" class="error-message">
+                    Onaylayıcı seçiniz.
+                </div>
+            </div>
+  
+            <div class="form-group">
+                <label for="departmentName">Departman Adı</label>
+                <select id="departmentName" formControlName="departmentName" required>
+                  <option value="" disabled selected>Departman seçiniz</option>
+                  <option *ngFor="let department of departments" [value]="department">{{ department }}</option>
+                </select>
+                <div *ngIf="requestForm.controls['departmentName'].invalid && requestForm.controls['departmentName'].touched" class="error-message">
+                  Departman adı seçiniz.
+                </div>
+              </div>
+                      
+            <div class="form-group">
+                <label for="attachments">Ek Dosyalar</label>
+                <input type="file" id="attachments" name="attachments" multiple>
+            </div>
+  
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Gönder</button>
+                <button type="button" class="btn btn-secondary" (click)="onCancel()">İptal</button>
+            </div>
+        </form>
+    </div>
+  </body>

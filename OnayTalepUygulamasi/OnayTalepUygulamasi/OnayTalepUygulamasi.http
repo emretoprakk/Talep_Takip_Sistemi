@@ -1,0 +1,6 @@
+@OnayTalepUygulamasi_HostAddress = http://localhost:5123
+
+GET {{OnayTalepUygulamasi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

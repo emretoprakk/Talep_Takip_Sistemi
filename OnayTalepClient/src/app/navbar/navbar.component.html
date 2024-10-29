@@ -1,0 +1,66 @@
+<div *ngIf="!isUserLoggedIn && !isApproverLoggedIn">
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a href="https://www.btc-ag.com.tr/" target="_blank">
+        <img src="assets/btc.jpeg" alt="My App Logo">
+      </a>
+    </div>
+    <button class="navbar-toggle" (click)="toggleMenu()">
+      <i class="fa fa-bars"></i>
+    </button>
+    <ul class="navbar-links" [ngClass]="{'navbar-links-open': isMenuOpen}">
+      <li class="spacer"></li>
+      <li><a routerLink="/" routerLinkActive="active">Anasayfa</a></li>
+      <li><a routerLink="/" routerLinkActive="active">Hakkımızda</a></li>
+      <li><a routerLink="/" routerLinkActive="active">İletişim</a></li>
+      <li><a routerLink="/" routerLinkActive="active">Yardım</a></li>
+      <li><a routerLink="/auth-form" routerLinkActive="active">Giriş</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div *ngIf="isApproverLoggedIn">
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a href="https://www.btc-ag.com.tr/" target="_blank">
+        <img src="assets/btc.jpeg" alt="My App Logo">
+      </a>
+    </div>
+    <button class="navbar-toggle" (click)="toggleMenu()">
+      <i class="fa fa-bars"></i>
+    </button>
+    <ul class="navbar-links" [ngClass]="{'navbar-links-open': isMenuOpen}">
+      <li class="spacer"></li>
+      <li class="navbar-actions">
+        <button routerLink="/admin/" class="notification-button">
+          <i class="fa fa-bell"></i>
+        </button>
+      </li>
+      <li><a routerLink="/admin/" routerLinkActive="active">Anasayfa</a></li>
+      <li><a routerLink="/admin/request-management" routerLinkActive="active">Talep Yönetimi</a></li>
+      <li><a routerLink="/admin/" routerLinkActive="active">Profil</a></li>
+      <li><a routerLinkActive="active" (click)="logout()">Çıkış</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div *ngIf="isUserLoggedIn">
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a href="https://www.btc-ag.com.tr/" target="_blank">
+        <img src="assets/btc.jpeg" alt="My App Logo">
+      </a>
+    </div>
+    <button class="navbar-toggle" (click)="toggleMenu()">
+      <i class="fa fa-bars"></i>
+    </button>
+    <ul class="navbar-links" [ngClass]="{'navbar-links-open': isMenuOpen}">
+      <li class="spacer"></li>
+      <li><a routerLink="/user/" routerLinkActive="active">Anasayfa</a></li>
+      <li><a routerLink="/user/request" routerLinkActive="active">Yeni Talep</a></li>
+      <li><a routerLink="/user/my-requests" routerLinkActive="active">Taleplerim</a></li>
+      <li><a routerLink="/user/profile" routerLinkActive="active">Profil</a></li>
+      <li><a routerLinkActive="active" (click)="logout()">Çıkış</a></li>
+    </ul>
+  </nav>
+</div>

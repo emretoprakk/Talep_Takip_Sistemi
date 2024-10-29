@@ -1,0 +1,145 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #003366;
+  padding: 0.5rem 2rem;
+  height: 60px;
+  flex-wrap: wrap;  
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-logo img {
+  height: 44px;
+  width: auto;
+  cursor: pointer;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar-links li {
+  margin-left: 1rem;
+}
+
+.navbar-links a, .navbar-brand {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.navbar-links a:hover {
+  background-color: #004080;
+}
+
+.navbar-links a .fa-bell {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.navbar-links {
+  margin-left: auto;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.notification-button {
+  margin-left: auto;
+  padding: 0.25rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.notification-button i {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.notification-button:hover {
+  background-color: #004080;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar-links.navbar-links-open {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin: 0;
+    width: 100%;
+  }
+
+  .navbar-links a, .navbar-brand {
+    padding: 10px 15px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .navbar-actions {
+    width: 100%;
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+
+  .notification-button {
+    margin-left: 0;
+    padding: 0.5rem;
+    width: 100%;
+    text-align: left;
+  }
+}

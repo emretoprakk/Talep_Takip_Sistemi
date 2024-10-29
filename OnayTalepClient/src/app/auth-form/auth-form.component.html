@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="auth-form.component.css">
+    <title></title>
+</head>
+
+<body>
+  <div class="container" [ngClass]="isSignDivVisable ? 'active' : ''" id="container">
+    <div class="form-container sign-up">
+      <form (ngSubmit)="register()">
+        <h1>Hesap Oluştur</h1>
+        <div class="social-icons">
+          <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/company/btc-bilisim/posts/?feedView=all" target="_blank" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <span>veya kayıt olmak için e-posta kullanın</span>
+        <input type="text" placeholder="İsim" [(ngModel)]="username" name="username" required>
+        <input type="email" placeholder="E-posta" [(ngModel)]="email" name="email" required>
+        <input type="password" placeholder="Şifre" [(ngModel)]="password" name="password" required>
+        <button type="submit">Kayıt Ol</button>
+      </form>
+    </div>
+    <div class="form-container sign-in">
+      <form (ngSubmit)="login()">
+        <h1>Giriş Yap</h1>
+        <div class="social-icons">
+          <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/company/btc-bilisim/posts/?feedView=all" target="_blank" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <span>veya e-posta şifrenizi kullanın</span>
+        <input type="email" placeholder="E-posta" [(ngModel)]="email" name="email" required>
+        <input type="password" placeholder="Şifre" [(ngModel)]="password" name="password" required>
+        <a href="#">→ Şifrenizi mi unuttunuz? ←</a>
+        <button type="submit">Giriş Yap</button>
+      </form>
+    </div>
+    <div class="toggle-container">
+      <div class="toggle">
+        <div class="toggle-panel toggle-left">
+          <h1>Tekrar Hoşgeldiniz!</h1>
+          <p>Kişisel bilgilerinizi girerek tüm site özelliklerini kullanın</p>
+          <button class="hidden" id="login" (click)="isSignDivVisable = false">Giriş Yap</button>
+        </div>
+        <div class="toggle-panel toggle-right">
+          <h1>Merhaba!</h1>
+          <p>Kayıt olmak için kişisel bilgilerinizi girin ve tüm site özelliklerini kullanın</p>
+          <button class="hidden" id="register" (click)="isSignDivVisable = true">Kayıt Ol</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

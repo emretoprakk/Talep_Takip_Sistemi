@@ -1,0 +1,48 @@
+<div class="container">
+  <h2>Kullanıcı Talepleri</h2>
+  <div class="requests">
+    <div class="request" *ngFor="let request of requests" [ngClass]="[request.status.toLowerCase(), request.id === selectedRequestId ? 'selected' : '']" (click)="openRequestDetails(request)">
+      <div class="request-details">
+        <p><strong>Açıklama:</strong> {{ request.description }}</p>
+        <p><strong>Kullanıcı:</strong> {{ request.username }}</p>
+        <p><strong>Onaylayıcı:</strong> {{ userRole }}</p>
+        <p><strong>Departman:</strong> {{ request.departmentName }}</p>
+        <p><strong>Talep Tarihi:</strong> {{ request.createdDate | date:'dd/MM/yyyy HH:mm:ss' }}</p>
+      </div>
+      <div class="request-status">
+        <label for="status-{{ request.id }}">
+          Durum:
+          <span class="status-icon">
+            <i *ngIf="request.status === 'Pending'" class="fa fa-hourglass-half pending-icon"></i>
+            <i *ngIf="request.status === 'Approved'" class="fa fa-check-circle approved-icon"></i>
+            <i *ngIf="request.status === 'Rejected'" class="fa fa-times-circle rejected-icon"></i>
+          </span>
+        </label>
+        <select id="status-{{ request.id }}" [(ngModel)]="request.status" (ngModelChange)="updateStatus(request, request.status)" (click)="$event.stopPropagation()">
+          <option value="Pending" [selected]="request.status === 'Pending'">Beklemede</option>
+          <option value="Approved" [selected]="request.status === 'Approved'">Onaylandı</option>
+          <option value="Rejected" [selected]="request.status === 'Rejected'">Reddedildi</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #requestDetailsDialog let-data>
+  <div class="dialog-container">
+    <div class="dialog-header">
+      <h2>Talep Detayları</h2>
+      <button mat-icon-button (click)="closeDialog() ">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+    <div class="request-detail">
+      <p><strong>Açıklama:</strong> {{ data.description }}</p>
+      <p><strong>Kullanıcı:</strong> {{ data.username }}</p>
+      <p><strong>Onaylayıcı:</strong> {{ userRole }}</p>
+      <p><strong>Departman:</strong> {{ data.departmentName }}</p>
+      <p><strong>Talep Tarihi:</strong> {{ data.createdDate | date:'dd/MM/yyyy HH:mm:ss' }}</p>
+      <p><strong>Durum:</strong> <span [ngClass]="data.status.toLowerCase()">{{ data.status }}</span></p>
+    </div>
+  </div>
+</ng-template>

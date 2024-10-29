@@ -1,0 +1,105 @@
+# Angular Projesi İçin
+
+# Angular Build Output
+/dist
+/.angular/cache
+/tmp
+/out-tsc
+/bazel-out
+
+# Node Modules
+node_modules
+
+# Log Files
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# IDE ve Editör Dosyaları
+.idea/
+/.project
+.classpath
+.c9/
+/.settings/
+/*.launch
+*.sublime-workspace
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Environment Files
+src/environments/environment*.ts
+
+# Test Files
+*.spec.ts
+
+# Miscellaneous Cache and Coverage Folders
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+.history/*
+.sass-cache/
+/connect.lock
+
+# Sistem Dosyaları
+.DS_Store
+Thumbs.db
+
+# .NET Projesi İçin
+
+# Kullanıcı Özgü Dosyalar
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated Dosyalar
+*.log
+*.obj
+*.cache
+*.pdb
+*.mdb
+*.opendb
+*.vscode
+
+# Build Çıktıları
+bin/
+obj/
+out/
+debug/
+release/
+TestResults/
+*.ncrunchproject
+*.ncrunchsolution
+.vscode/
+
+# Publish Çıktıları
+publish/
+publishOutput/
+*.PublishProfiles/
+
+# Paket Yönetimi
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Diğer .NET Cache ve Temp Dosyaları
+.vs/
+.vscode/
+.env
+
+# Temporary Dosyalar
+~$*
+*.tmp
+*.bak
+*.old
+*.backup
+*.swp
