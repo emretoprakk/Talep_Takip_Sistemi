@@ -1,4 +1,4 @@
-🌟 Talep Takip Sistemi
+# 🌟 Talep Takip Sistemi
 
 Bu uygulama, kullanıcıların talepler oluşturmasına ve bu talepler için bir onaylayıcı atamasına olanak tanır. Atanan onaylayıcı, kendisine gelen talepleri görüntüleyebilir ve her bir talebin durumunu belirleyebilir. Uygulama, süreç takibini kolaylaştırarak iş akışlarını düzenler.
 
