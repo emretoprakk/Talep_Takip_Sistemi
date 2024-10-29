@@ -4,15 +4,15 @@ Bu uygulama, kullanıcıların talepler oluşturmasına ve bu talepler için bir
 
 ## 🚀 Temel Özellikler
 
-###  ➤   Talep Oluşturma
+###   ➤   Talep Oluşturma
 
 Kullanıcılar yeni talepler oluşturabilir ve her talep için bir onaylayıcı seçebilir.
 
-###  ➤   Onaylayıcı Atama
+###   ➤   Onaylayıcı Atama
 
 Her talep için kullanıcı tarafından bir onaylayıcı atanır. Bu onaylayıcı, talebi yönetir ve sürecini takip eder.
 
-###  ➤   Onay Durumu Yönetimi
+###   ➤   Onay Durumu Yönetimi
 
 Onaylayıcılar kendilerine gelen tüm talepleri görüntüleyebilir ve bu taleplerin durumunu (🟢 Onaylandı, 🔴 Reddedildi, 🟡 Beklemede) güncelleyebilir.
 
